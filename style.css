@@ -3,6 +3,43 @@
 }
 
 body{
+    background-color: #dadfe4;
     font-family: "Poppins",sans-serif;
     margin: 0;
+    display: flex;
+    margin-top: 25vh;
+    align-items: center; 
+    justify-content: center;
+}
+
+.quiz-container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+.quiz-header{
+    padding: 4rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+button{
+    background-color: rgb(30, 7, 160);
+    color: white;
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    font-size: 1.3rem;
+}
+
+button:hover{
+    background-color:  rgb(13, 4, 65);
 }
