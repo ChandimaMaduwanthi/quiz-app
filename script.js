@@ -43,12 +43,16 @@ const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
+const answers = document.getElementsByName('answer');
+const quiz = document.getElementById('quiz');
 
 let currentQuiz = 0;
+let score = 0;
 
 loadQuiz();
 
 function loadQuiz(){
+    deselected();
     const currentQuizData = quizData[currentQuiz];
     
     question.innerHTML = currentQuizData.question;
@@ -60,18 +64,40 @@ function loadQuiz(){
 }
 
 submitBtn.addEventListener('click' , () =>{
-    currentQuiz++;
-    if(currentQuiz < quizData.length){
-        loadQuiz();
-    }else{
-        alert("You finished!");
-    }    
+    const selected = getSelected();
+    console.log(selected);
+
+    if(selected){
+        if(selected === quizData[currentQuiz].correct){
+            score++;
+        }
+        currentQuiz++;
+        if(currentQuiz < quizData.length){
+            loadQuiz();
+        }else{
+            quiz.innerHTML=`<h2>You answered correctly ${score}/${quizData.length} questions.</h2>`;
+            quiz.style.color = `rgb(30, 7, 160)`;
+            quiz.style.padding = `50px`;
+        } 
+    }   
 }
 );
 
-function getSelected(){
-    const answers = document.getElementsByName('answer');
+function deselected(){
     answers.forEach((answer) => {
-        console.log(answer);
-    })
+            answer.checked = false;
+    });
+}
+
+function getSelected(){
+
+    let selected = undefined;
+
+    answers.forEach((answer) => {
+        if(answer.checked){
+            selected = answer.id;
+        }
+    });
+
+    return selected;
 }
