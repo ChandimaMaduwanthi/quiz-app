@@ -34,6 +34,41 @@ const quizData = [
         c: '1994',
         d: 'none of the above',
         correct: 'b',
+    },{
+        question: 'Name of the screen that recognizes touch input is?',
+        a: 'Recog screen',
+        b: 'Point Screen',
+        c: 'Touch Screen',
+        d: 'Android Screen',
+        correct: 'c',
+    },{
+        question: 'Which one of these stores more data than a DVD ?',
+        a: 'CD Rom',
+        b: 'Floppy',
+        c: 'Blue Ray Disk',
+        d: 'Red Ray Disk',
+        correct: 'c',
+    },{
+        question: 'Which one is the result of the output given by a computer?',
+        a: 'Data',
+        b: 'Istruction',
+        c: 'Information',
+        d: 'Excursion',
+        correct: 'c',
+    },{
+        question: 'Which one of these also known as read/write memory ?',
+        a: 'ROM',
+        b: 'RAM',
+        c: 'DVD',
+        d: 'Hard Disk',
+        correct: 'b',
+    },{
+        question: 'Which of the followings is true regarding the <caption> tag in html?',
+        a: 'It defines a caption for table.',
+        b: 'It can specify only one caption per table.',
+        c: 'It must be inserted immediately after the <table>tag.',
+        d: 'All of above',
+        correct: 'd',
     }
 ];
 
